@@ -8,6 +8,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <title>Weather Forecast</title>
   </head>
   <body>
@@ -23,15 +24,23 @@
           <input type="submit" value="Search" class="search-form-button" />
         </form>
       </header>
-      <main>
-        <h1>London</h1>
-        <p>
-          Friday 09:44, scattered clouds
-          <br />
-          Humidity: 66%, Wind: 5.00km/h
-        </p>
-        <div>🌞 12°C</div>
-      </main>
+       <main>
+      <div class="weather-data">
+        <div class="weather-info">
+          <h1 class="weather-city" id="city">London</h1>
+          <p class="weather-details">
+            Friday 09:44, scattered clouds
+            <br />
+            Humidity: 66%, Wind: 5.00km/h
+          </p>
+        </div>
+        <div class="weather-temperature-container">
+          <span class="material-symbols-outlined" style="font-size: 60px;">cloud</span>
+          <span class="weather-temperature" id="temperature">12</span>
+          <span class="weather-unit">°C</span>
+        </div>
+      </div>
+    </main>
       </br>
       <footer>
         Coded by <a href="https://github.com/meganbachelor">Megan Bachelor</a>,
@@ -42,6 +51,5 @@
           >Netlify</a
         >
       </footer>
-    </div>
   </body>
 </html>
