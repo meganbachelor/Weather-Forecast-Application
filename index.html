@@ -14,7 +14,7 @@
   <body>
     <div class="weather-application">
       <header>
-          <form class="search-form">
+          <form class="search-form" id="search-form">
           <input
             type="search"
             placeholder="Enter a city.."
@@ -28,20 +28,51 @@
       <div class="weather-data">
         <div class="weather-info">
           <h1 class="weather-city" id="city">London</h1>
-          <p class="weather-details">
-            Friday 09:44, scattered clouds
+          <div class="weather-details">
+            Sunday 19:31, scattered clouds
             <br />
-            Humidity: 66%, Wind: 5.00km/h
-          </p>
+            Humidity: <span class="weather-details-highlight">66%</span>, Wind: <span class="weather-details-highlight">5.00km/h</span>
+          </div>
         </div>
         <div class="weather-temperature-container">
-          <span class="material-symbols-outlined" style="font-size: 60px;">cloud</span>
-          <span class="weather-temperature" id="temperature">12</span>
+          <span class="material-symbols-outlined" style="font-size: 60px; color: #45b383;">cloud</span>
+          <span class="weather-temperature" id="temperature"> 12</span>
           <span class="weather-unit">°C</span>
         </div>
       </div>
+      <div class="forecast-container">
+        <div class="forecast-box">
+          <p class="forecast-day">Mon</p>
+          <span class="material-symbols-outlined">cloud</span>
+          <p class="forecast-temp">15°C</p>
+        </div>
+        <div class="forecast-box">
+          <p class="forecast-day">Tue</p>
+          <span class="material-symbols-outlined">sunny</span>
+          <p class="forecast-temp">18°C</p>
+        </div>
+        <div class="forecast-box">
+          <p class="forecast-day">Wed</p>
+          <span class="material-symbols-outlined">rainy</span>
+          <p class="forecast-temp">12°C</p>
+        </div>
+        <div class="forecast-box">
+          <p class="forecast-day">Thu</p>
+          <span class="material-symbols-outlined">cloud</span>
+          <p class="forecast-temp">14°C</p>
+        </div>
+        <div class="forecast-box">
+          <p class="forecast-day">Fri</p>
+          <span class="material-symbols-outlined">sunny</span>
+          <p class="forecast-temp">17°C</p>
+        </div>
+        <div class="forecast-box">
+          <p class="forecast-day">Sat</p>
+          <span class="material-symbols-outlined">cloud</span>
+          <p class="forecast-temp">16°C</p>
+        </div>
+      </div>
     </main>
-      </br>
       <footer>
         Coded by <a href="https://github.com/meganbachelor">Megan Bachelor</a>,
         is open-sourced on
@@ -51,5 +82,6 @@
           >Netlify</a
         >
       </footer>
+    <script src="src/index.js"></script>
   </body>
 </html>
