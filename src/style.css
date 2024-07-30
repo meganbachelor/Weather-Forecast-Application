@@ -96,21 +96,16 @@ main {
 
 .weather-details .material-symbols-outlined {
   width: 70px;
-  font-size: 90px;
+  font-size: 100px;
   color: #45b383;
   height: 70px;
   margin-right: 10px;
 }
 
 .weather-temperature {
-  font-size: 80px;
+  font-size: 65px;
   line-height: 80px;
   font-weight: bold;
-}
-
-.weather-unit {
-  font-size: 30px;
-  margin-left: 5px;
 }
 
 footer {
