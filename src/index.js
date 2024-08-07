@@ -70,3 +70,26 @@ function searchSubmit(event) {
 
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", searchSubmit);
+
+function displayForecast() {
+  let days = ["Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+  let forecastHTML = "";
+
+  days.forEach(function (day) {
+    forecastHTML += `
+    <div class="weather-forecast-box">
+        <p class="weather-forecast-day">${day}</p>
+        <span class="material-symbols-outlined">cloud</span>
+        <div class="weather-forecast-temperatures">
+          <div class="weather-forecast-temperature"><strong>15°C</strong></div>
+          <div class="weather-forecast-temperature">10°C</div>
+        </div>
+    </div>
+    `;
+  });
+
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHTML;
+}
+
+displayForecast();
