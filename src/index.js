@@ -32,6 +32,8 @@ function getWeather(response) {
   } else if (description.includes("clear")) {
     iconElement.innerHTML = "Clear_Day";
   }
+
+  getForecast(response.data.city);
 }
 function formatDate(date) {
   let days = [
@@ -71,7 +73,14 @@ function searchSubmit(event) {
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", searchSubmit);
 
-function displayForecast() {
+function getForecast(city) {
+  let apiKey = "58c32ct4af077777ac72ab80o05e54b7";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
+  console.log(response.data);
   let days = ["Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
   let forecastHTML = "";
 
@@ -91,5 +100,3 @@ function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = forecastHTML;
 }
-
-displayForecast();
