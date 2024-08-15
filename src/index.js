@@ -1,21 +1,3 @@
-function getWeatherIcon(description) {
-  if (description.includes("cloud")) {
-    return "Cloud";
-  } else if (description.includes("sun")) {
-    return "Sunny";
-  } else if (description.includes("rain")) {
-    return "Rainy";
-  } else if (description.includes("thunderstorm")) {
-    return "Thunderstorm";
-  } else if (description.includes("snow")) {
-    return "Weather_Snowy";
-  } else if (description.includes("clear")) {
-    return "Clear_Day";
-  } else {
-    return "n.a.";
-  }
-}
-
 function getWeather(response) {
   console.log(response.data);
 
@@ -37,8 +19,7 @@ function getWeather(response) {
   descriptionElement.innerHTML = description;
   humidityElement.innerHTML = `Humidity: ${response.data.temperature.humidity}%`;
   windSpeedElement.innerHTML = `, Wind: ${response.data.wind.speed}km/h`;
-
-  iconElement.innerHTML = getWeatherIcon(description);
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-icon" />`;
 
   getForecast(response.data.city);
 }
@@ -104,12 +85,10 @@ function displayForecast(response) {
 
   response.data.daily.forEach(function (day, index) {
     if (index < 7 && !isToday(day.time)) {
-      let weatherIcon = getWeatherIcon(day.condition.description);
-
       forecastHTML += `
       <div class="weather-forecast-box">
         <p class="weather-forecast-day">${formatDay(day.time)}</p>
-        <span class="material-symbols-outlined">${weatherIcon}</span>
+        <img src="${day.condition.icon_url}" class="weather-icon" />
         <div class="weather-forecast-temperatures">
           <div class="weather-forecast-temperature"><strong>${Math.round(
             day.temperature.maximum

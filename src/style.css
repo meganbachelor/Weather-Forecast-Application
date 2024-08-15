@@ -4,13 +4,13 @@ body {
 }
 
 a {
-  color: #28615b;
+  color: #53a8b6;
 }
 
 .weather-application {
   background: white;
-  max-width: 600px;
   margin: 45px auto;
+  max-width: 600px;
   border-radius: 10px;
   padding: 30px;
   box-shadow: 0px 40px 60px rgba(190, 183, 183, 0.1);
@@ -41,7 +41,7 @@ header {
 }
 
 .search-form-button {
-  background: #28615b;
+  background: #385170;
   border: none;
   border-radius: 6px;
   width: 100px;
@@ -68,15 +68,17 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-top: 0px;
 }
 
 .weather-city {
   font-size: 50px;
   line-height: 50px;
+  color: #385170;
 }
 
 .weather-details-highlight {
-  color: #45b383;
+  color: #53a8b6;
   font-size: 16px;
   font-weight: bold;
 }
@@ -89,21 +91,20 @@ main {
 }
 
 .weather-temperature-container {
-  margin-top: 50px;
+  margin-top: 35px;
   display: flex;
   align-items: center;
 }
 
-.weather-details .material-symbols-outlined {
-  width: 70px;
-  font-size: 150px;
-  color: #50c878;
-  height: 70px;
-  margin-right: 20px;
+.weather-temperature-container .weather-icon {
+  width: 130px;
+  height: 130px;
+  margin-right: 10px;
 }
 
 .weather-temperature {
   font-size: 70px;
+  color: #385170;
   line-height: 1;
   font-weight: bold;
   margin-right: 0px;
@@ -113,6 +114,7 @@ main {
 
 .temperature-metric {
   font-size: 30px;
+  color: #385170;
   margin-left: 0px;
   padding-left: 0px;
   line-height: 1;
@@ -134,19 +136,24 @@ main {
   text-align: center;
   width: calc(100% / 6 - 25px);
   box-shadow: 0px 4px 8px rgba(190, 183, 183, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .weather-forecast-day {
   font-size: 14px;
   font-weight: 600;
   margin: 5px 0 15px 0;
-  color: #45b383;
+  color: #385170;
 }
 
-.forecast-box .material-symbols-outlined {
-  font-size: 40px;
+.weather-forecast-box .weather-icon {
+  width: 70px;
+  height: 70px;
   display: block;
-  margin: 10px auto;
+  margin: 0 auto;
 }
 .weather-forecast-temperatures {
   text-align: center;
@@ -158,7 +165,7 @@ main {
 .weather-forecast-temperature {
   padding: 0 5px;
   font-size: 12px;
-  color: #50c878;
+  color: #53a8b6;
 }
 footer {
   border-top: 1px solid #e4f6f6;
