@@ -133,7 +133,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 3.5px;
+  margin: 0 3.5px 3.5px 3.5px;
   padding: 8px;
   width: calc(100% / 6 - 25px);
   text-align: center;
@@ -152,8 +152,8 @@ main {
 .weather-forecast-box .weather-icon {
   display: block;
   margin: 0 auto;
-  height: 70px;
-  width: 70px;
+  height: 60px;
+  width: 60px;
 }
 .weather-forecast-temperatures {
   display: flex;
@@ -165,7 +165,7 @@ main {
 .weather-forecast-temperature {
   padding: 0 5px;
   color: #53a8b6;
-  font-size: 12px;
+  font-size: 13px;
 }
 footer {
   padding: 20px 0 0 0;
