@@ -137,7 +137,7 @@ main {
   padding: 8px;
   width: calc(100% / 6 - 25px);
   text-align: center;
-  background-color: #e4f6f6;
+  background-color: #eef8f8;
   border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(190, 183, 183, 0.1);
 }

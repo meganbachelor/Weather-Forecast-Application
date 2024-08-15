@@ -14,7 +14,7 @@ function getWeather(response) {
   let temperature = response.data.temperature.current;
   temperatureElement.innerHTML = `${Math.round(
     temperature
-  )} <span class="temperature-metric">&#176;C</span>`;
+  )}<span class="temperature-metric">&#176;C</span>`;
   let description = response.data.condition.description;
   descriptionElement.innerHTML = description;
   humidityElement.innerHTML = `Humidity: ${response.data.temperature.humidity}%`;
